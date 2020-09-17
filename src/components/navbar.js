@@ -3,12 +3,11 @@ import Img from "gatsby-image"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
-import { Grid } from '@material-ui/core';
+import "./layout.css";
 
 const LogoWrap = styled.div`
   margin: auto 0;
   flex: 0 1 36px;
-
   @media (max-width: 768px) and (orientation: landscape) {
     flex: 0 1 25px;
   }
@@ -102,7 +101,7 @@ const Hamburger = styled.div`
 const Logo = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(name: { eq: "gatsby-icon" }, extension: { eq: "png" }) {
+      file(name: { eq: "mylogo" }, extension: { eq: "png" }) {
         childImageSharp {
           fluid(maxWidth: 50, pngQuality: 80) {
             ...GatsbyImageSharpFluid
@@ -119,14 +118,32 @@ const Logo = () => {
   )
 }
 
+const navPages = [
+	{
+		name: "About", 
+		path: "/about"
+  },
+  {
+		name: "Code", 
+		path: "/code"
+  },
+  {
+		name: "Contact", 
+		path: "/contact"
+  },
+];
+
 const NavbarLinks = () => {
   return (
-    <Grid item>
-      <Link to="/">About</Link>
-      <Link to="/404">Services</Link>
-      <Link to="/">Gallery</Link>
-      <Link to="/404">Contact</Link>
-    </Grid>
+    <div class="flex justify-between">
+      {navPages.map((page) => (
+        <div className="mt-4 ml-10">
+          <Link to={ page.path } className="no-underline">
+            { page.name }
+          </Link>
+        </div>
+      ))}
+    </div>
   )
 }
 

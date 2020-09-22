@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import Img from "gatsby-image"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import styled from 'styled-components'
 
 import mylogo from "../images/mylogo.png"

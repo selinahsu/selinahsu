@@ -10,7 +10,6 @@ const Code = () => (
     <SEO title="Coding Projects" />
     <h1>Coding Projects</h1>
     <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 

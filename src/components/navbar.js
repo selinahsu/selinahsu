@@ -7,10 +7,8 @@ import "./layout.css";
 
 const LogoWrap = styled.div`
   margin: auto 0;
-  flex: 0 1 36px;
-  @media (max-width: 768px) and (orientation: landscape) {
-    flex: 0 1 25px;
-  }
+  flex: 0 1 40px;
+  white-space: nowrap
 `
 
 const Navigation = styled.nav`
@@ -22,13 +20,13 @@ const Navigation = styled.nav`
   text-transform: uppercase;
   border-bottom: none;
   margin: 0 auto;
-  padding: 0 5vw;
+  padding: 0 2em;
   z-index: 2;
   align-self: center;
 
   @media (max-width: 768px) {
     position: sticky;
-    height: 8vh;
+    height: 15vh;
     top: 0;
     left: 0;
     right: 0;
@@ -61,7 +59,7 @@ const Navbox = styled.div`
     padding-top: 10vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 8vh;
+    top: 15vh;
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `
@@ -119,13 +117,12 @@ const Logo = () => {
 }
 
 const navPages = [
-	{
-		name: "About", 
-		path: "/about"
-  },
   {
-		name: "Code", 
-		path: "/code"
+		name: "Home", 
+		path: "/"
+  },{
+		name: "Projects", 
+		path: "/projects"
   },
   {
 		name: "Contact", 

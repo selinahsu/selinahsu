@@ -36,14 +36,14 @@ const IndexPage = () => (
           <h1 className="text-700">Hi there!</h1>
           <p class="text-xl">My name is Selina and I'm currently a 3rd-year student studying Mechatronics Engineering at the University of Waterloo. </p>
           {socialLinks.map((link) => 
-        <a href={ link.url }>
-          <img className="social-icons"
-            src={ link.name } 
-            align="left"
-            alt="media link"
-          />
-        </a>
-      )}
+            <a href={ link.url } target="_blank">
+              <img className="social-icons"
+                src={ link.name } 
+                align="left"
+                alt="media link"
+              />
+            </a>
+          )}
         </div>
       </div>
       <h3 className="text-xl">About Me</h3>

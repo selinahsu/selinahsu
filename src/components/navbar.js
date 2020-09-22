@@ -9,7 +9,7 @@ import "./layout.css";
 
 const LogoWrap = styled.div`
   margin-right: 0;
-  margin-top: 5vh;
+  margin-top: 1.5em;
   flex: 0 1 45px;
 `
 
@@ -28,7 +28,7 @@ const Navigation = styled.nav`
 
   @media (max-width: 768px) {
     position: sticky;
-    height: 15vh;
+    height: 5em;
     top: 0;
     left: 0;
     right: 0;

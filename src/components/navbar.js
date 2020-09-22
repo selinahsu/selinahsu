@@ -3,12 +3,14 @@ import Img from "gatsby-image"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
+import mylogo from "../images/mylogo.png"
+
 import "./layout.css";
 
 const LogoWrap = styled.div`
-  margin: auto 0;
-  flex: 0 1 40px;
-  white-space: nowrap
+  margin-right: 0;
+  margin-top: 5vh;
+  flex: 0 1 45px;
 `
 
 const Navigation = styled.nav`
@@ -96,25 +98,25 @@ const Hamburger = styled.div`
   }
 `
 
-const Logo = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(name: { eq: "mylogo" }, extension: { eq: "png" }) {
-        childImageSharp {
-          fluid(maxWidth: 50, pngQuality: 80) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+// const Logo = () => {
+//   const data = useStaticQuery(graphql`
+//     query {
+//       file(name: { eq: "mylogo" }, extension: { eq: "png" }) {
+//         childImageSharp {
+//           fluid(maxWidth: 50, pngQuality: 80) {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//     }
+//   `)
 
-  return (
-    <LogoWrap as={Link} to="/">
-      <Img fluid={data.file.childImageSharp.fluid} alt="logo" />
-    </LogoWrap>
-  )
-}
+//   return (
+//     <LogoWrap as={Link} to="/">
+//       <Img fluid={data.file.childImageSharp.fluid} alt="logo" />
+//     </LogoWrap>
+//   )
+// }
 
 const navPages = [
   {
@@ -149,7 +151,9 @@ const Navbar = () => {
 
   return (
     <Navigation>
-      <Logo />
+      <LogoWrap as={Link} to="/">
+        <img src={mylogo} />
+      </LogoWrap>
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}

@@ -152,7 +152,7 @@ const Navbar = () => {
   return (
     <Navigation>
       <LogoWrap as={Link} to="/">
-        <img src={mylogo} />
+        <img src={mylogo} height="auto" width="50"/>
       </LogoWrap>
       <Toggle
         navbarOpen={navbarOpen}

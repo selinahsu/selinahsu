@@ -4,47 +4,7 @@ import styled from 'styled-components'
 
 import mylogo from "../images/mylogo.png"
 
-import "./layout.css";
-
-const LogoWrap = styled.div`
-  margin-right: 0;
-  margin-top: 1.5em;
-  flex: 0 1 45px;
-`
-
-const Navigation = styled.nav`
-  height: 5em;
-  display: flex;
-  background-color: #fff;
-  position: relative;
-  justify-content: space-between;
-  text-transform: uppercase;
-  border-bottom: none;
-  margin: 0 auto;
-  padding: 0 2em;
-  z-index: 2;
-  align-self: center;
-
-  @media (max-width: 768px) {
-    position: sticky;
-    height: 5em;
-    top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
-  }
-`
-
-const Toggle = styled.div`
-  display: none;
-  height: 100%;
-  cursor: pointer;
-  margin: 0 2em;
-
-  @media (max-width: 768px) {
-    display: flex;
-  }
-`
+import "./navbar.css";
 
 const Navbox = styled.div`
   display: flex;
@@ -149,16 +109,16 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <Navigation>
-      <LogoWrap as={Link} to="/">
+    <div className="navigation">
+      <div as={Link} to="/" className="logo-wrap">
         <img src={mylogo} height="auto" width="50"/>
-      </LogoWrap>
-      <Toggle
+      </div>
+      <div className="toggle"
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
       >
         {navbarOpen ? <Hamburger open /> : <Hamburger />}
-      </Toggle>
+      </div>
       {navbarOpen ? (
         <Navbox>
           <NavbarLinks />
@@ -168,7 +128,7 @@ const Navbar = () => {
           <NavbarLinks />
         </Navbox>
       )}
-    </Navigation>
+    </div>
   )
 }
 

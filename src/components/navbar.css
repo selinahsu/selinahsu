@@ -1,0 +1,39 @@
+.logo-wrap {
+    margin-right: 0;
+    margin-top: 1.5em;
+    flex: 0 1 45px;
+}
+
+.navigation {
+    height: 5em;
+    display: flex;
+    background-color: #fff;
+    position: relative;
+    justify-content: space-between;
+    text-transform: uppercase;
+    border-bottom: none;
+    margin: 0 auto;
+    padding: 0 2em;
+    z-index: 2;
+    align-self: center;
+
+    @media (max-width: 768px) {
+        position: sticky;
+        height: 5em;
+        top: 0;
+        left: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+.toggle {
+    display: none;
+    height: 100%;
+    cursor: pointer;
+    margin: 0 2em;
+
+    @media (max-width: 768px) {
+        display: flex;
+  }
+}

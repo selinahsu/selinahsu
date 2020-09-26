@@ -48,7 +48,7 @@ const IndexPage = () => (
       </div>
       <h3 className="text-xl">About Me</h3>
 
-      <p class="text-xl">This website is a work in progress, made using Gatsby, React, GraphQL,and Tailwind CSS. </p>
+      <p class="text-xl">This website is a work in progress, made using Gatsby, React, GraphQL, and Tailwind CSS. </p>
 
       <h3 className="text-xl">Here are some of the things that I do: </h3>
       <Link to="/projects"><p className="font-bold">Code</p></Link>

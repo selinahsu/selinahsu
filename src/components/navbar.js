@@ -29,7 +29,7 @@ const Navbox = styled.div`
     justify-content: flex-start;
     padding-top: 1em;
     background-color: #fff;
-    transition: all 0.3s ease-in;
+    transition: none;
     top: 7em;
     left: ${props => (props.open ? "-100%" : "0")};
   }
@@ -101,19 +101,19 @@ const navPages = [
   },
 ];
 
-// const NavbarLinks = () => {
-//   return (
-//     <div class="flex justify-between">
-//       {navPages.map((page) => (
-//         <div className="mt-4 ml-10">
-//           <Link to={ page.path } className="no-underline">
-//             { page.name }
-//           </Link>
-//         </div>
-//       ))}
-//     </div>
-//   )
-// }
+const NavbarLinks = () => {
+  return (
+    <div class="flex justify-between">
+      {navPages.map((page) => (
+        <div className="mt-4 ml-10">
+          <Link to={ page.path } className="no-underline">
+            { page.name }
+          </Link>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -141,13 +141,7 @@ const Navbar = () => {
         </Navbox>
       ) : (
         <Navbox open> {/* desktop appearance */}
-          {navPages.map((page) => (
-            <div className="mt-4 ml-10">
-              <Link to={ page.path } className="no-underline">
-                { page.name }
-              </Link>
-            </div>
-          ))}
+          <NavbarLinks />
         </Navbox>
       )}
     </div>

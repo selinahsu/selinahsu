@@ -6,10 +6,20 @@ import mylogo from "../images/mylogo.png"
 
 import "./navbar.css";
 
+const Toggle = styled.div`
+  display: none;
+  height: 100%;
+  cursor: pointer;
+  margin: 0 2em;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`
+
 const Navbox = styled.div`
   display: flex;
   height: 100%;
-  justify-content: flex-end;
   align-items: center;
 
   @media (max-width: 768px) {
@@ -17,10 +27,10 @@ const Navbox = styled.div`
     position: fixed;
     width: 100%;
     justify-content: flex-start;
-    padding-top: 10vh;
+    padding-top: 1em;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 15vh;
+    top: 7em;
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `
@@ -91,19 +101,19 @@ const navPages = [
   },
 ];
 
-const NavbarLinks = () => {
-  return (
-    <div class="flex justify-between">
-      {navPages.map((page) => (
-        <div className="mt-4 ml-10">
-          <Link to={ page.path } className="no-underline">
-            { page.name }
-          </Link>
-        </div>
-      ))}
-    </div>
-  )
-}
+// const NavbarLinks = () => {
+//   return (
+//     <div class="flex justify-between">
+//       {navPages.map((page) => (
+//         <div className="mt-4 ml-10">
+//           <Link to={ page.path } className="no-underline">
+//             { page.name }
+//           </Link>
+//         </div>
+//       ))}
+//     </div>
+//   )
+// }
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -113,19 +123,31 @@ const Navbar = () => {
       <div as={Link} to="/" className="logo-wrap">
         <img src={mylogo} height="auto" width="50"/>
       </div>
-      <div className="toggle"
+      <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
       >
         {navbarOpen ? <Hamburger open /> : <Hamburger />}
-      </div>
+      </Toggle>
       {navbarOpen ? (
-        <Navbox>
-          <NavbarLinks />
+        <Navbox> {/* small screen appearance */}
+            {navPages.map((page) => (
+              <div className="mt-4 ml-10">
+                <Link to={ page.path } className="no-underline">
+                  { page.name }
+                </Link>
+              </div>
+            ))}
         </Navbox>
       ) : (
-        <Navbox open>
-          <NavbarLinks />
+        <Navbox open> {/* desktop appearance */}
+          {navPages.map((page) => (
+            <div className="mt-4 ml-10">
+              <Link to={ page.path } className="no-underline">
+                { page.name }
+              </Link>
+            </div>
+          ))}
         </Navbox>
       )}
     </div>

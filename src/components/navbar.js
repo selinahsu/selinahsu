@@ -91,9 +91,14 @@ const navPages = [
   {
 		name: "Home", 
 		path: "/"
-  },{
-		name: "Projects", 
-		path: "/projects"
+  },
+  {
+		name: "Work", 
+		path: "/work"
+  },
+  {
+		name: "Misc", 
+		path: "/misc"
   },
   {
 		name: "Contact", 
@@ -105,8 +110,8 @@ const NavbarLinks = () => {
   return (
     <div class="flex justify-between">
       {navPages.map((page) => (
-        <div className="mt-4 ml-10">
-          <Link to={ page.path } className="no-underline">
+        <div className="navbarlinks mt-4 ml-10">
+          <Link to={ page.path } className="text-base capitalize no-underline">
             { page.name }
           </Link>
         </div>
@@ -120,8 +125,10 @@ const Navbar = () => {
 
   return (
     <div className="navigation">
-      <div as={Link} to="/" className="logo-wrap">
-        <img src={mylogo} height="auto" width="50"/>
+      <div className="logo-wrap">
+        <Link to="/">
+          <img src={mylogo} height="auto" width="50"/>
+        </Link>
       </div>
       <Toggle
         navbarOpen={navbarOpen}

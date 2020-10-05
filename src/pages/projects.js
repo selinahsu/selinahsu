@@ -52,7 +52,7 @@ const featuredProjects = [
 const Work = () => (
   <Layout>
     <SEO title="Featured Projects" />
-    <h2>Featured Projects</h2>
+    <h1>Featured Projects</h1>
     <p>Here are some programming projects that I've worked on: </p>
 
     {featuredProjects.map((project, index) =>

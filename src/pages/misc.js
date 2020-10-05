@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const miscItems = [
   {
-    title: "Art",
+    title: "My Art",
     description: "I attended an arts and design program in high school called CyberARTS. I really learned a lot there and it kicked off my interest in engineering. You can see some of my portfolio at my old website (not mobile-friendly). ",
     linkName: "selinahsu.github.io",
     link: "https://selinahsu.github.io/visual-art.html"
@@ -18,7 +18,7 @@ const miscItems = [
     link: "https://uwaterloo.ca/engineering-student-ambassadors/"
   },
   {
-    title: "MATES",
+    title: "MATES Peer Support",
     description: "MATES (Mentor Assistance Through Education and Support) is a one-to-one student peer support program offered by the Waterloo Undergraduate Student Association. MATES volunteers are trained in providing support to students who are hoping to build social skills, or are experiencing personal or academic concerns or low-level mental health and wellness difficulties. ",
     linkName: "wusa.ca/services/uw-mates",
     link: "https://wusa.ca/services/uw-mates"

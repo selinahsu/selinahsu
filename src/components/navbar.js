@@ -93,11 +93,11 @@ const navPages = [
 		path: "/"
   },
   {
-		name: "Work", 
-		path: "/work"
+		name: "Projects", 
+		path: "/projects"
   },
   {
-		name: "Misc", 
+		name: "Miscellaneous", 
 		path: "/misc"
   },
   {
@@ -111,7 +111,7 @@ const NavbarLinks = () => {
     <div class="flex justify-between">
       {navPages.map((page) => (
         <div className="navbarlinks mt-4 ml-10">
-          <Link to={ page.path } className="text-base capitalize no-underline">
+          <Link to={ page.path } className="text-base no-underline">
             { page.name }
           </Link>
         </div>

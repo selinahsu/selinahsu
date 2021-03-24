@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import "../components/layout.css"
@@ -7,6 +6,14 @@ import Image from '../components/image';
 import SEO from "../components/seo"
 
 const featuredProjects = [
+  {
+    title: "Eat2Gether",
+    description: "Eat2Gether is an iOS app that helps a group of people make a decision about a local restaurant to eat at.",
+    image: "eat2gether.png",
+    linkName: "github.com/selinahsu/eat-together-backend",
+    link: "https://github.com/selinahsu/eat-together-backend",
+    tags: ["Express", "MongoDB", "Heroku"]
+  },
   {
     title: "Jetstream",
     description: "Jetstream is a project that draws attention to the environmental impact of flying. It's a tool that calculates the carbon emissions of taking a passenger flight and encourages people to work towards offsetting it. ",
@@ -29,7 +36,7 @@ const featuredProjects = [
     image: "aislevision.jpg",
     linkName: "devpost.com/software/aisle-vision",
     link: "https://devpost.com/software/aisle-vision",
-    tags: ["Voiceflow API", "Google Cloud", "Express", "React"]
+    tags: ["Python", "Raspberry Pi", "Google Cloud"]
   },
   {
     title: "Sprout",

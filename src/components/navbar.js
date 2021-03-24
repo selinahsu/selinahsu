@@ -31,7 +31,7 @@ const Navbox = styled.div`
     background-color: #fff;
     transition: none;
     top: 7em;
-    left: ${props => (props.open ? "-100%" : "0")};
+    left: ${props => (props.open ? "-150%" : "0")};
   }
 `
 
@@ -111,7 +111,7 @@ const NavbarLinks = () => {
     <div class="flex justify-between">
       {navPages.map((page) => (
         <div className="navbarlinks mt-4 ml-10">
-          <Link to={ page.path } className="text-base no-underline">
+          <Link to={ page.path } className="no-underline">
             { page.name }
           </Link>
         </div>
@@ -127,7 +127,7 @@ const Navbar = () => {
     <div className="navigation">
       <div className="logo-wrap">
         <Link to="/">
-          <img src={mylogo} height="auto" width="50"/>
+          <img src={mylogo} alt="logo" height="auto" width="50"/>
         </Link>
       </div>
       <Toggle

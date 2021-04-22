@@ -118,14 +118,13 @@ const IndexPage = () => (
 
     <h2>Experience Overview</h2>
     <p>
-      More details over on my 
-        <a 
-          href="https://www.linkedin.com/in/selenium-hsu"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LinkedIn
-        </a>!
+      More over on my <a 
+        href="https://www.linkedin.com/in/selenium-hsu"
+        target="_blank"
+        rel="noreferrer"
+      >
+        LinkedIn
+      </a>!
     </p>
 
     {workXP.map((project, index) =>
@@ -150,11 +149,15 @@ const IndexPage = () => (
     
     <br />
     
-    <p><i>This website is a work in progress, made using <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">Gatsby, </a>
-      <a href="https://reactjs.org/" target="_blank" rel="noreferrer">React, </a>
-      <a href="https://graphql.org/" target="_blank" rel="noreferrer">GraphQL, </a> and 
-      <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> Tailwind CSS. </a>
-    </i></p>
+    <p style={{ color: "grey" }}>
+      <i>This website is a work in progress, made using <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">Gatsby, </a>
+        <a href="https://reactjs.org/" target="_blank" rel="noreferrer">React, </a>
+        <a href="https://graphql.org/" target="_blank" rel="noreferrer">GraphQL, </a> and 
+        <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> Tailwind CSS. </a>
+      </i>
+      <br />
+      Source code on Github <a href="https://github.com/selinahsu/selinahsu" target="_blank" rel="noreferrer">here</a>. 
+    </p>
   </Layout>
 )
 

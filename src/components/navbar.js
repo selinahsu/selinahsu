@@ -97,7 +97,7 @@ const navPages = [
 		path: "/projects"
   },
   {
-		name: "Miscellaneous", 
+		name: "Fun Stuff", 
 		path: "/misc"
   },
   {

@@ -7,8 +7,24 @@ import SEO from "../components/seo"
 
 const featuredProjects = [
   {
+    title: "AisleVision",
+    description: " AisleVision is a robot that scans store shelves for out-of-stock items. At Hack Western 2019, I used Python to program a Raspberry Pi to drive a chassis carrying a camera scanner. ",
+    image: "aislevision.jpg",
+    linkName: "devpost.com/software/aisle-vision",
+    link: "https://devpost.com/software/aisle-vision",
+    tags: ["Python", "Raspberry Pi", "Google Cloud"]
+  },
+  {
+    title: "3D Printed Hammerhead Shark",
+    description: "I designed a phone stand modelled after the shape of a hammerhead shark. I built the model in SolidWorks and prepared it for 3D printing using GrabCAD. ",
+    image: "hammerhead.png",
+    linkName: "",
+    link: "",
+    tags: ["SolidWorks", "GrabCAD"]
+  },
+  {
     title: "Eat2Gether",
-    description: "Eat2Gether is an iOS app that helps a group of people make a decision about a local restaurant to eat at.",
+    description: "Eat2Gether is an iOS app that helps a group of people make a decision about a local restaurant to eat at. I specifically worked on implementing the Google Places API into our backend to find local restaurants that matched a group's dietary preferences.",
     image: "eat2gether.png",
     linkName: "github.com/selinahsu/eat-together-backend",
     link: "https://github.com/selinahsu/eat-together-backend",
@@ -29,14 +45,6 @@ const featuredProjects = [
     linkName: "devpost.com/software/say-soup",
     link: "https://devpost.com/software/say-soup",
     tags: ["Voiceflow API", "Google Cloud", "Express", "React"]
-  },
-  {
-    title: "AisleVision",
-    description: " AisleVision is a robot that scans store shelves for out-of-stock items. At Hack Western 2019, I used Python to program a Raspberry Pi to drive a chassis carrying a camera scanner. ",
-    image: "aislevision.jpg",
-    linkName: "devpost.com/software/aisle-vision",
-    link: "https://devpost.com/software/aisle-vision",
-    tags: ["Python", "Raspberry Pi", "Google Cloud"]
   },
   {
     title: "Sprout",
@@ -60,7 +68,6 @@ const Work = () => (
   <Layout>
     <SEO title="Featured Projects" />
     <h1>Featured Projects</h1>
-    <p>Here are some programming projects that I've worked on: </p>
 
     {featuredProjects.map((project, index) =>
       <div class="flex flex-wrap mb-6" style={{ minHeight: '10em' }}>
@@ -80,7 +87,6 @@ const Work = () => (
       </div>
     )}
 
-    
   </Layout>
 )
 

@@ -31,23 +31,23 @@ const miscItems = [
 
 const musicVideos = [
   {
+    title: "The Seed",
+    url: "https://www.youtube.com/embed/sZdqhRCrK4M"
+  },
+  {
     title: "Waving Through a Zoom Call",
     url: "https://www.youtube.com/embed/jwBeP0QVTE0"
   },
   {
-    title: "The Seed",
+    title: "Wings",
     url: "https://www.youtube.com/embed/idh0Oxu0BHo"
-  },
-  {
-    title: "Shake it Out",
-    url: "https://www.youtube.com/embed/Vd-IKxtnLE8"
   }
 ]
 
 const Misc = () => (
   <Layout>
-    <SEO title="Miscellaneous" />
-    <h1>Miscellaneous</h1>
+    <SEO title="Fun Stuff" />
+    <h1>Fun Stuff</h1>
     <p>Here are some other things that I do when I'm not working or studying: </p>
 
     <h2 style={{ marginBottom: 0 }}>A Cappella</h2>

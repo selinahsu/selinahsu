@@ -28,18 +28,25 @@ const socialLinks = [
 
 const skillsLeft = [
   'C/C++', 
-  'Python', 
-  'Linux Bash/Shell', 
-  'Makefiles'
+  'Python',
+  'Bash/Shell Scripting'
+  
 ]
 const skillsRight = [
-  'PostgreSQL',
-  'MongoDB',
-  'Django',
-  'Node.js and Express.js', 
+  'MATLAB',
+  'Oscilloscopes',
+  'PostgreSQL'
 ]
 
 const workXP = [
+  {
+    title: "Silicon and Systems Validation Engineer",
+    description: "I'm currently interning on the AP Silicon Validation team at Tesla, where I'm focusing on running power experiments and writing automation scripts to support them.",
+    image: "Tesla_T.png",
+    linkName: "tesla.com",
+    link: "https://www.tesla.com/careers",
+    tags: ["Python", "Bash", "Hardware"]
+  },
   {
     title: "Firmware Team Member",
     description: "I write firmware in C and Python for the solar car student design team at the University of Waterloo, Midnight Sun. ",
@@ -84,7 +91,7 @@ const IndexPage = () => (
       </div>
       <div className="w-full sm:w-8/12 my-auto">
         <h1 className="text-700">Hi there! I'm Selina. </h1>
-        <p class="text-lg">I'm a 3rd-year mechatronics engineering student at the University of Waterloo. I have experience in firmware and in full-stack development, and I'm currently seeking <b>internships for Fall 2021. </b></p>
+        <p class="text-lg">I'm a 3rd-year mechatronics engineering student at the University of Waterloo. I have experience in firmware and hardware validation, and I'm currently seeking <b>internships for Spring/Summer 2022. </b></p>
         {socialLinks.map((link) => 
           <Link to={ link.url } target="_blank" rel="noreferrer">
             <img className="social-icons"
@@ -96,8 +103,8 @@ const IndexPage = () => (
         )}
       </div>
     </div>
-    <h2>Skills Overview</h2>
-    <p>Some recent technologies I've been working with include:</p>
+    {/* <h2>Skills Overview</h2>
+    <p>Some technologies I'm familiar with include:</p>
     
     <div className="flex flex-wrap justify-start my-5">
       <div class="w-full md:w-1/4 md:mr-5 my-auto">
@@ -114,7 +121,7 @@ const IndexPage = () => (
           )}
         </ul>
       </div>
-    </div>
+    </div> */}
 
     <h2>Experience Overview</h2>
     <p>
@@ -155,8 +162,8 @@ const IndexPage = () => (
         <a href="https://graphql.org/" target="_blank" rel="noreferrer">GraphQL, </a> and 
         <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> Tailwind CSS. </a>
       </i>
-      <br />
-      Source code on Github <a href="https://github.com/selinahsu/selinahsu" target="_blank" rel="noreferrer">here</a>. 
+      {/* <br />
+      Source code on Github <a href="https://github.com/selinahsu/selinahsu" target="_blank" rel="noreferrer">here</a>.  */}
     </p>
   </Layout>
 )

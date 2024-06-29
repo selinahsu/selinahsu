@@ -93,7 +93,7 @@ const navPages = [
 		path: "/"
   },
   {
-		name: "Projects", 
+		name: "Hackathon Projects", 
 		path: "/projects"
   },
   {

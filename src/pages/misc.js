@@ -48,18 +48,18 @@ const Misc = () => (
     <h2 style={{ marginBottom: 0 }}>A Cappella</h2>
     <p style={{ marginTop: "0.5em" }}>I sang a cappella groups when I was in university, and produced a cappella cover videos during the COVID19 pandemic.</p>
         
-    {musicVideos.map((video, index) => (
-      <div className="video" key={index}>
+    {musicVideos.map(video => 
+      <div className="video">
         <iframe
           className="video-iframe"
-          title={video.title}
-          src={video.url}
-          frameBorder="0"
+          title={ video.title }
+          src={ video.url }
+          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+          allowfullscreen>
+        </iframe>
       </div>
-    ))}
+    )}
 
     {miscItems.map((item, index) => (
       <div key={index}>

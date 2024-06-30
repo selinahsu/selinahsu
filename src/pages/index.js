@@ -40,45 +40,52 @@ const skillsRight = [
 
 const workXP = [
   {
-    title: "Silicon and Systems Validation Engineer",
-    description: "I'm currently interning on the AP Silicon Validation team at Tesla, where I'm focusing on running power experiments and writing automation scripts to support them.",
-    image: "Tesla_T.png",
-    linkName: "tesla.com",
-    link: "https://www.tesla.com/careers",
-    tags: ["Python", "Bash", "Hardware"]
+    title: "Application Engineer",
+    description: "I joined the Cadence new college graduate rotational program, where I completed two 6-month rotations on different teams. My first rotation was on a digital implementation team, where I worked on physical design flows using Cadence Flowtool and Innovus. My second rotation was on a verification team, where I developed a UVM testbench based off existing directed tests. After the rotations, I joined the verification team full-time.",
+    image: "cadence_square.png",
+    linkName: "Cadence Design Systems",
+    link: "https://www.cadence.com",
+    tags: ["SystemVerilog", "UVM", "Xcelium", "Tcl", "Python"]
   },
   {
-    title: "Firmware Team Member",
-    description: "I write firmware in C and Python for the solar car student design team at the University of Waterloo, Midnight Sun. ",
-    image: "midsun.jpg",
-    linkName: "uwmidsun.com",
-    link: "https://www.uwmidsun.com/about",
-    tags: ["C", "Python"]
+    title: "Hardware Software Integration Engineer",
+    description: "I worked on a team responsible for the integration of hardware subsystems on the Zoox vehicle platform. I worked cross-functionally with ECU development teams to build the initial prototype of an end-of-line firmware flashing station. ",
+    image: "zoox.jpg",
+    linkName: "Zoox",
+    link: "https://www.zoox.com",
+    tags: ["Python", "Bash"]
+  },
+  {
+    title: "Silicon and Systems Validation Engineer",
+    description: "I ran power experiments to ensure the performance and reliability of binned silicon lots. I also built automation tools to execute high-volume post-silicon validation tests for custom SoCs.",
+    image: "Tesla_T.png",
+    linkName: "Tesla",
+    link: "https://www.tesla.com",
+    tags: ["Python", "Bash"]
   },
   {
     title: "Firmware Developer",
-    description: "I worked with STM32 microcontroller-based systems and tested peripherals such as Bluetooth and CAN. I also wrote some technical transition documentation, and designed Python and bash scripts to automate some firmware validation. ",
+    description: "I worked with STM32 microcontroller-based systems and tested peripherals such as Bluetooth and CAN. I also wrote technical documentation, and designed Python and bash scripts to automate firmware validation. ",
     image: "curiato.png",
-    linkName: "curiato.com",
-    link: "https://www.curiato.com",
-    tags: ["C", "Python", "Linux", "Bash"]
+    linkName: "Curiato (Startup)",
+    link: "https://www.linkedin.com/company/curiato",
+    tags: ["C", "Python", "Bash"]
   },
   {
     title: "Full Stack Developer",
     description: "I made a number of codebase improvements and created REST API endpoints in Django to support new features. I also spent some time exploring ways to implement CI/CD for the company and learning how to Dockerize our application.",
     image: "veerai.jpg",
-    linkName: "veer.ai",
-    link: "https://veer.ai",
-    tags: ["Python (Django)", "React"]
+    linkName: "Veer AI (Startup)",
+    link: "https://www.linkedin.com/company/veer-ai",
+    tags: ["Python", "Django", "Javascript", "React"]
   },
   {
     title: "Software Developer",
-    description: "I worked on developing cross-platform iOS/Android applications using Flutter and Dart. I also had the opportunity to work with a UI/UX designed to prototype a app that would help students learn about and manage their credit score. ",
-    // description: "TD Labs is an innovation team \"for students, by students\" that focuses on the unique financial challenges of post-secondary life. During my time there, I worked on developing cross-platform iOS/Android applications using Flutter and Dart. I also had the opportunity to work with a UI/UX designed to prototype a app that would help students learn about and manage their credit score. ",
+    description: "I developed cross-platform iOS/Android mobile apps using Flutter and Dart. I also collaborated with UI/UX designers to prototype an app to help students understand and manage their credit score. ",
     image: "td.png",
-    linkName: "tdlab.io",
-    link: "https://tdlab.io",
-    tags: ["Flutter", "Firebase", "Vue.js"]
+    linkName: "TD Labs",
+    link: "https://medium.com/td-lab",
+    tags: ["Flutter", "Dart", "Firebase", "Vue.js"]
   }
 ]
 
@@ -91,7 +98,7 @@ const IndexPage = () => (
       </div>
       <div className="w-full sm:w-8/12 my-auto">
         <h1 className="text-700">Hi there! I'm Selina. </h1>
-        <p class="text-lg">I'm a 3rd-year mechatronics engineering student at the University of Waterloo. I have experience in firmware and hardware validation, and I'm currently seeking <b>internships for Spring/Summer 2022. </b></p>
+        <p class="text-lg">I'm currently working in the Bay Area as a DV application engineer at Cadence. Before that, I graduated from the University of Waterloo with a bachelor's degree in mechatronics engineering.</p>
         {socialLinks.map((link) => 
           <Link to={ link.url } target="_blank" rel="noreferrer">
             <img className="social-icons"
@@ -125,13 +132,6 @@ const IndexPage = () => (
 
     <h2>Experience Overview</h2>
     <p>
-      More over on my <a 
-        href="https://www.linkedin.com/in/selenium-hsu"
-        target="_blank"
-        rel="noreferrer"
-      >
-        LinkedIn
-      </a>!
     </p>
 
     {workXP.map((project, index) =>

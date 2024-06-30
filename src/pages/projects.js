@@ -66,8 +66,8 @@ const featuredProjects = [
 
 const Work = () => (
   <Layout>
-    <SEO title="Featured Projects" />
-    <h1>Featured Projects</h1>
+    <SEO title="Hackathon Projects" />
+    <h1>Hackathon Projects</h1>
 
     {featuredProjects.map((project, index) =>
       <div class="flex flex-wrap mb-6" style={{ minHeight: '10em' }}>

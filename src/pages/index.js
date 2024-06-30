@@ -131,15 +131,8 @@ const IndexPage = () => (
     </div> */}
 
     <h2>Experience Overview</h2>
-    {/* <p>
-      More over on my <a 
-        href="https://www.linkedin.com/in/selenium-hsu"
-        target="_blank"
-        rel="noreferrer"
-      >
-        LinkedIn
-      </a>!
-    </p> */}
+    <p>
+    </p>
 
     {workXP.map((project, index) =>
       <div class="flex flex-wrap mb-6" style={{ minHeight: '1em' }}>
